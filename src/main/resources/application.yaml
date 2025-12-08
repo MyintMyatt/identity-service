@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  http2:
+    enabled: true
+spring:
+  application:
+    name: identity-service
+  profiles:
+    active: prod
+
+#  datasource config
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pos_db
+    username: admin
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      show_sql: true
+api:
+  base:
+    path: identity-service/api/v1
