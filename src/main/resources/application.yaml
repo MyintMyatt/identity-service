@@ -6,7 +6,7 @@ server:
 grpc:
   client:
     mailServer:
-      address: "static://localhost:9090"
+      address: "static://192.168.100.28:9090"#"static://localhost:9090"
       negotiation-type: plaintext
 spring:
   application:

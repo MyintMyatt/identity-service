@@ -7,5 +7,5 @@ import org.springframework.stereotype.Service;
 public interface OtpService {
     ApiResponse generateOtp(String email, String ipAddr);
 
-    ApiResponse verifyOtp(String otp);
+    ApiResponse verifyOtp(String email, String otp, String remoteAddr);
 }
