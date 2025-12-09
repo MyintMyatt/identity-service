@@ -1,7 +1,12 @@
 # Identity Service
 
  The purpose of this service is for **user management, authentication and authorization process.**
-### Server port: ``8080``
+## Server port
+- **Identity-Service** : ``8080``
+- **Grpc-Mail-Service**: ``9090``
+- **Redis**: ``6379``
+- **PostgresSql**: ``5432``
+
  
  ## Tech Stack
  

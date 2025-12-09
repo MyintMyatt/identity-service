@@ -18,8 +18,8 @@ services:
     image: dpage/pgadmin4
     container_name: pgadmin_ui
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@app.com
-      PGADMIN_DEFAULT_PASSWORD: password
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
 #      TZ: Asia/Yangon
       TZ: Asia/Rangoon
     ports:
@@ -29,7 +29,33 @@ services:
     networks:
       - spring-network
 
+  redis:
+    image: redis:7.2
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf # Mount custom config
+    command: redis-server /usr/local/etc/redis/redis.conf --requirepass ${REDIS_PASSWORD}
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    restart: always
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - spring-network
+
+
 volumes:
   postgres_data:
+  redis_data:
+
 networks:
   spring-network:
+    driver: bridge

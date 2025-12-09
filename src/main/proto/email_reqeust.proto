@@ -1,0 +1,28 @@
+syntax= "proto3";
+
+option java_multiple_files= true;
+option java_package = "orion.grpc.mail";
+option java_outer_classname = "EmailRequestClass";
+
+message EmailRequest{
+  string subject = 1;
+  repeated string receivers = 2;
+  repeated string cc = 3;
+  repeated string bcc = 4;
+  /*main dynamic email body*/
+  string emailBodyHtml = 5;
+//  /*option*/
+//  map<string, string> variables = 6;
+
+}
+
+message EmailResponse{
+  int32  code = 1;
+  bool success = 2;
+  string message = 3;
+}
+
+
+service EmailService{
+  rpc SendEmail(EmailRequest) returns (EmailResponse);
+}

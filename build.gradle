@@ -39,6 +39,7 @@ dependencies {
 	implementation ( 'org.springframework.boot:spring-boot-starter-webmvc' ){
         exclude(group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat')
     }
+    /*jetty*/
     implementation 'org.springframework.boot:spring-boot-starter-jetty:4.0.0'
     implementation 'org.eclipse.jetty.http2:jetty-http2-server:12.1.4'
 
@@ -47,8 +48,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-kafka'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    /*grpc server*/
 	implementation 'io.grpc:grpc-services'
 	implementation 'org.springframework.grpc:spring-grpc-server-web-spring-boot-starter'
+
+    /*grpc client*/
+    implementation 'net.devh:grpc-client-spring-boot-starter:3.1.0.RELEASE'
 
     /*google oauth*/
     implementation('com.google.api-client:google-api-client:2.8.1')
@@ -58,6 +64,10 @@ dependencies {
     /*validation*/
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     testImplementation 'org.springframework.boot:spring-boot-starter-validation-test'
+
+    /*redis*/
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.apache.commons:commons-pool2:2.11.1'
 
     /*mapstruct*/
     implementation 'org.mapstruct:mapstruct:1.6.3'
