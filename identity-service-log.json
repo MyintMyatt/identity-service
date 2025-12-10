@@ -1,0 +1,341 @@
+2025-12-10T21:50:02.483+06:30  INFO 33585 --- [identity-service] [main] c.o.i.IdentityServiceApplication         : Starting IdentityServiceApplication using Java 21.0.9 with PID 33585 (/home/orion/Projects/TechBasedProj/spring-boot/demo-microservice/identity-service/build/classes/java/main started by orion in /home/orion/Projects/TechBasedProj/spring-boot/demo-microservice/identity-service)
+2025-12-10T21:50:02.494+06:30  INFO 33585 --- [identity-service] [main] c.o.i.IdentityServiceApplication         : The following 1 profile is active: "prod"
+2025-12-10T21:50:03.596+06:30  INFO 33585 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-10T21:50:03.600+06:30  INFO 33585 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-10T21:50:03.752+06:30  INFO 33585 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 2 JPA repository interfaces.
+2025-12-10T21:50:03.789+06:30  INFO 33585 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-10T21:50:03.791+06:30  INFO 33585 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-10T21:50:03.810+06:30  INFO 33585 --- [identity-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.oroin.identity_service.features.user.repository.OAuthUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-10T21:50:03.811+06:30  INFO 33585 --- [identity-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.oroin.identity_service.features.user.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-10T21:50:03.811+06:30  INFO 33585 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-12-10T21:50:04.771+06:30  INFO 33585 --- [identity-service] [main] o.s.b.j.s.JettyServletWebServerFactory   : Server initialized with port: 8080
+2025-12-10T21:50:04.777+06:30  INFO 33585 --- [identity-service] [main] org.eclipse.jetty.server.Server          : jetty-12.1.4; built: 2025-11-10T17:42:37.481Z; git: 4137e00793d583cfc4ce76bf607e482178a85597; jvm 21.0.9+10
+2025-12-10T21:50:04.815+06:30  INFO 33585 --- [identity-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2255 ms
+2025-12-10T21:50:05.023+06:30  INFO 33585 --- [identity-service] [main] o.e.j.session.DefaultSessionIdManager    : Session workerName=node0
+2025-12-10T21:50:05.030+06:30  INFO 33585 --- [identity-service] [main] o.e.jetty.server.handler.ContextHandler  : Started osbjs.JettyEmbeddedWebAppContext@fb5d334{application,/,b=file:/tmp/jetty-docbase.8080.1425608969375043478/,a=AVAILABLE,h=oeje11s.SessionHandler@45dc7be{STARTED}}
+2025-12-10T21:50:05.032+06:30  INFO 33585 --- [identity-service] [main] o.e.j.e.servlet.ServletContextHandler    : Started osbjs.JettyEmbeddedWebAppContext@fb5d334{application,/,b=file:/tmp/jetty-docbase.8080.1425608969375043478/,a=AVAILABLE,h=oeje11s.SessionHandler@45dc7be{STARTED}}
+2025-12-10T21:50:05.033+06:30  INFO 33585 --- [identity-service] [main] org.eclipse.jetty.server.Server          : Started oejs.Server@6ceb11f9{STARTING}[12.1.4,sto=0] @257ms
+2025-12-10T21:50:05.190+06:30  INFO 33585 --- [identity-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-10T21:50:05.239+06:30  INFO 33585 --- [identity-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-10T21:50:05.693+06:30  INFO 33585 --- [identity-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-10T21:50:05.738+06:30  INFO 33585 --- [identity-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-10T21:50:05.947+06:30  INFO 33585 --- [identity-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28b7646
+2025-12-10T21:50:05.951+06:30  INFO 33585 --- [identity-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-10T21:50:06.007+06:30  WARN 33585 --- [identity-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-10T21:50:06.040+06:30  INFO 33585 --- [identity-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/pos_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.11
+	Default catalog/schema: pos_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-10T21:50:07.176+06:30  INFO 33585 --- [identity-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-10T21:50:07.224+06:30  INFO 33585 --- [identity-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T21:50:07.607+06:30  INFO 33585 --- [identity-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
+2025-12-10T21:50:07.834+06:30  INFO 33585 --- [identity-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-10T21:50:08.051+06:30  WARN 33585 --- [identity-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-10T21:50:08.132+06:30  WARN 33585 --- [identity-service] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8d1e3283-5200-4062-96fa-b1227336db71
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-10T21:50:08.140+06:30  INFO 33585 --- [identity-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-10T21:50:08.894+06:30  INFO 33585 --- [identity-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-10T21:50:08.961+06:30  INFO 33585 --- [identity-service] [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-10T21:50:08.961+06:30  INFO 33585 --- [identity-service] [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-10T21:50:08.965+06:30  INFO 33585 --- [identity-service] [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-12-10T21:50:08.972+06:30  INFO 33585 --- [identity-service] [main] o.e.jetty.server.AbstractConnector       : Started oejs.ServerConnector@349e6ca8{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8080}
+2025-12-10T21:50:08.975+06:30  INFO 33585 --- [identity-service] [main] o.s.boot.jetty.JettyWebServer            : Jetty started on port 8080 (http/1.1, h2c) with context path '/'
+2025-12-10T21:50:08.986+06:30  INFO 33585 --- [identity-service] [main] c.o.i.IdentityServiceApplication         : Started IdentityServiceApplication in 7.081 seconds (process running for 7.492)
+2025-12-10T21:51:38.366+06:30  INFO 33585 --- [identity-service] [qtp978881375-38] c.o.i.f.a.service.impl.OtpServiceImpl    : incoming request for otp generation - nnmm5122004@gmail.com
+2025-12-10T21:51:38.367+06:30  INFO 33585 --- [identity-service] [qtp978881375-38] c.o.i.f.a.service.impl.OtpServiceImpl    : generate otp for email : nnmm5122004@gmail.com
+2025-12-10T21:51:38.792+06:30  INFO 33585 --- [identity-service] [qtp978881375-38] c.o.i.f.a.service.impl.OtpServiceImpl    : sending otp mail to mail service
+2025-12-10T22:11:41.163+06:30  INFO 33585 --- [identity-service] [qtp978881375-34] c.o.i.f.a.service.impl.OtpServiceImpl    : incoming request for otp generation - nnmm5122004@gmail.com
+2025-12-10T22:11:41.163+06:30  INFO 33585 --- [identity-service] [qtp978881375-34] c.o.i.f.a.service.impl.OtpServiceImpl    : generate otp for email : nnmm5122004@gmail.com
+2025-12-10T22:11:41.167+06:30  INFO 33585 --- [identity-service] [qtp978881375-34] c.o.i.f.a.service.impl.OtpServiceImpl    : sending otp mail to mail service
+2025-12-10T22:13:39.220+06:30  INFO 33585 --- [identity-service] [qtp978881375-37] c.o.i.f.a.service.impl.OtpServiceImpl    : incoming request for otp generation - nnmm5122004@gmail.com
+2025-12-10T22:13:39.221+06:30  INFO 33585 --- [identity-service] [qtp978881375-37] c.o.i.f.a.service.impl.OtpServiceImpl    : generate otp for email : nnmm5122004@gmail.com
+2025-12-10T22:13:39.224+06:30  INFO 33585 --- [identity-service] [qtp978881375-37] c.o.i.f.a.service.impl.OtpServiceImpl    : sending otp mail to mail service
+2025-12-10T22:14:08.271+06:30  INFO 33585 --- [identity-service] [SpringApplicationShutdownHook] o.s.boot.jetty.GracefulShutdown          : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-10T22:14:08.272+06:30  INFO 33585 --- [identity-service] [jetty-shutdown] o.s.boot.jetty.GracefulShutdown          : Graceful shutdown complete
+2025-12-10T22:14:08.275+06:30  INFO 33585 --- [identity-service] [SpringApplicationShutdownHook] o.e.jetty.server.AbstractConnector       : Stopped oejs.ServerConnector@349e6ca8{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8080}
+2025-12-10T22:14:08.422+06:30  INFO 33585 --- [identity-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T22:14:08.426+06:30  INFO 33585 --- [identity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-10T22:14:08.429+06:30  INFO 33585 --- [identity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-10T22:14:08.435+06:30  INFO 33585 --- [identity-service] [SpringApplicationShutdownHook] org.eclipse.jetty.server.Server          : Stopped oejs.Server@6ceb11f9{STOPPING}[12.1.4,sto=0]
+2025-12-10T22:14:08.438+06:30  INFO 33585 --- [identity-service] [SpringApplicationShutdownHook] o.e.j.s.h.ContextHandler.application     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-12-10T22:14:08.439+06:30  INFO 33585 --- [identity-service] [SpringApplicationShutdownHook] o.e.j.e.servlet.ServletContextHandler    : Stopped osbjs.JettyEmbeddedWebAppContext@fb5d334{application,/,b=file:/tmp/jetty-docbase.8080.1425608969375043478/,a=AVAILABLE,h=oeje11s.SessionHandler@45dc7be{STOPPED}}
+2025-12-10T22:14:13.319+06:30  INFO 42630 --- [identity-service] [main] c.o.i.IdentityServiceApplication         : Starting IdentityServiceApplication using Java 21.0.9 with PID 42630 (/home/orion/Projects/TechBasedProj/spring-boot/demo-microservice/identity-service/build/classes/java/main started by orion in /home/orion/Projects/TechBasedProj/spring-boot/demo-microservice/identity-service)
+2025-12-10T22:14:13.339+06:30  INFO 42630 --- [identity-service] [main] c.o.i.IdentityServiceApplication         : The following 1 profile is active: "prod"
+2025-12-10T22:14:14.728+06:30  INFO 42630 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-10T22:14:14.731+06:30  INFO 42630 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-10T22:14:14.882+06:30  INFO 42630 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 2 JPA repository interfaces.
+2025-12-10T22:14:14.939+06:30  INFO 42630 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-10T22:14:14.941+06:30  INFO 42630 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-10T22:14:14.974+06:30  INFO 42630 --- [identity-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.oroin.identity_service.features.user.repository.OAuthUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-10T22:14:14.977+06:30  INFO 42630 --- [identity-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.oroin.identity_service.features.user.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-10T22:14:14.979+06:30  INFO 42630 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2025-12-10T22:14:16.465+06:30  INFO 42630 --- [identity-service] [main] o.s.b.j.s.JettyServletWebServerFactory   : Server initialized with port: 8080
+2025-12-10T22:14:16.478+06:30  INFO 42630 --- [identity-service] [main] org.eclipse.jetty.server.Server          : jetty-12.1.4; built: 2025-11-10T17:42:37.481Z; git: 4137e00793d583cfc4ce76bf607e482178a85597; jvm 21.0.9+10
+2025-12-10T22:14:16.553+06:30  INFO 42630 --- [identity-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3126 ms
+2025-12-10T22:14:17.010+06:30  INFO 42630 --- [identity-service] [main] o.e.j.session.DefaultSessionIdManager    : Session workerName=node0
+2025-12-10T22:14:17.024+06:30  INFO 42630 --- [identity-service] [main] o.e.jetty.server.handler.ContextHandler  : Started osbjs.JettyEmbeddedWebAppContext@4407b042{application,/,b=file:/tmp/jetty-docbase.8080.17922779704838390888/,a=AVAILABLE,h=oeje11s.SessionHandler@41f686af{STARTED}}
+2025-12-10T22:14:17.026+06:30  INFO 42630 --- [identity-service] [main] o.e.j.e.servlet.ServletContextHandler    : Started osbjs.JettyEmbeddedWebAppContext@4407b042{application,/,b=file:/tmp/jetty-docbase.8080.17922779704838390888/,a=AVAILABLE,h=oeje11s.SessionHandler@41f686af{STARTED}}
+2025-12-10T22:14:17.030+06:30  INFO 42630 --- [identity-service] [main] org.eclipse.jetty.server.Server          : Started oejs.Server@7be3abaa{STARTING}[12.1.4,sto=0] @554ms
+2025-12-10T22:14:17.219+06:30  INFO 42630 --- [identity-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-10T22:14:17.270+06:30  INFO 42630 --- [identity-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-10T22:14:17.892+06:30  INFO 42630 --- [identity-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-10T22:14:17.938+06:30  INFO 42630 --- [identity-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-10T22:14:18.151+06:30  INFO 42630 --- [identity-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@24d73c51
+2025-12-10T22:14:18.154+06:30  INFO 42630 --- [identity-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-10T22:14:18.204+06:30  WARN 42630 --- [identity-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-10T22:14:18.236+06:30  INFO 42630 --- [identity-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/pos_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.11
+	Default catalog/schema: pos_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-10T22:14:19.377+06:30  INFO 42630 --- [identity-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-10T22:14:19.443+06:30  INFO 42630 --- [identity-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T22:14:19.814+06:30  INFO 42630 --- [identity-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
+2025-12-10T22:14:20.085+06:30  INFO 42630 --- [identity-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-10T22:14:20.341+06:30  WARN 42630 --- [identity-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-10T22:14:20.451+06:30  WARN 42630 --- [identity-service] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 55a9bec6-9d24-4455-b8b5-9b009ca1c184
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-10T22:14:20.462+06:30  INFO 42630 --- [identity-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-10T22:14:21.378+06:30  INFO 42630 --- [identity-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-10T22:14:21.468+06:30  INFO 42630 --- [identity-service] [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-10T22:14:21.469+06:30  INFO 42630 --- [identity-service] [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-10T22:14:21.473+06:30  INFO 42630 --- [identity-service] [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-12-10T22:14:21.481+06:30  INFO 42630 --- [identity-service] [main] o.e.jetty.server.AbstractConnector       : Started oejs.ServerConnector@3e4aabde{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8080}
+2025-12-10T22:14:21.483+06:30  INFO 42630 --- [identity-service] [main] o.s.boot.jetty.JettyWebServer            : Jetty started on port 8080 (http/1.1, h2c) with context path '/'
+2025-12-10T22:14:21.495+06:30  INFO 42630 --- [identity-service] [main] c.o.i.IdentityServiceApplication         : Started IdentityServiceApplication in 8.798 seconds (process running for 9.429)
+2025-12-10T22:14:41.681+06:30  INFO 42630 --- [identity-service] [qtp576909528-38] c.o.i.f.a.service.impl.OtpServiceImpl    : incoming request for otp generation - nnmm5122004@gmail.com
+2025-12-10T22:14:41.681+06:30  INFO 42630 --- [identity-service] [qtp576909528-38] c.o.i.f.a.service.impl.OtpServiceImpl    : generate otp for email : nnmm5122004@gmail.com
+2025-12-10T22:14:42.275+06:30  INFO 42630 --- [identity-service] [qtp576909528-38] c.o.i.f.a.service.impl.OtpServiceImpl    : sending otp mail to mail service
+2025-12-10T22:17:27.641+06:30  INFO 42630 --- [identity-service] [SpringApplicationShutdownHook] o.s.boot.jetty.GracefulShutdown          : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-10T22:17:27.642+06:30  INFO 42630 --- [identity-service] [jetty-shutdown] o.s.boot.jetty.GracefulShutdown          : Graceful shutdown complete
+2025-12-10T22:17:27.646+06:30  INFO 42630 --- [identity-service] [SpringApplicationShutdownHook] o.e.jetty.server.AbstractConnector       : Stopped oejs.ServerConnector@3e4aabde{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8080}
+2025-12-10T22:17:27.784+06:30  INFO 42630 --- [identity-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T22:17:27.787+06:30  INFO 42630 --- [identity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-10T22:17:27.791+06:30  INFO 42630 --- [identity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-10T22:17:27.794+06:30  INFO 42630 --- [identity-service] [SpringApplicationShutdownHook] org.eclipse.jetty.server.Server          : Stopped oejs.Server@7be3abaa{STOPPING}[12.1.4,sto=0]
+2025-12-10T22:17:27.798+06:30  INFO 42630 --- [identity-service] [SpringApplicationShutdownHook] o.e.j.s.h.ContextHandler.application     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-12-10T22:17:27.800+06:30  INFO 42630 --- [identity-service] [SpringApplicationShutdownHook] o.e.j.e.servlet.ServletContextHandler    : Stopped osbjs.JettyEmbeddedWebAppContext@4407b042{application,/,b=file:/tmp/jetty-docbase.8080.17922779704838390888/,a=AVAILABLE,h=oeje11s.SessionHandler@41f686af{STOPPED}}
+2025-12-10T22:17:32.504+06:30  INFO 43822 --- [identity-service] [main] c.o.i.IdentityServiceApplication         : Starting IdentityServiceApplication using Java 21.0.9 with PID 43822 (/home/orion/Projects/TechBasedProj/spring-boot/demo-microservice/identity-service/build/classes/java/main started by orion in /home/orion/Projects/TechBasedProj/spring-boot/demo-microservice/identity-service)
+2025-12-10T22:17:32.521+06:30  INFO 43822 --- [identity-service] [main] c.o.i.IdentityServiceApplication         : The following 1 profile is active: "prod"
+2025-12-10T22:17:34.166+06:30  INFO 43822 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-10T22:17:34.169+06:30  INFO 43822 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-10T22:17:34.303+06:30  INFO 43822 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 2 JPA repository interfaces.
+2025-12-10T22:17:34.361+06:30  INFO 43822 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-10T22:17:34.363+06:30  INFO 43822 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-10T22:17:34.385+06:30  INFO 43822 --- [identity-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.oroin.identity_service.features.user.repository.OAuthUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-10T22:17:34.387+06:30  INFO 43822 --- [identity-service] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.oroin.identity_service.features.user.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-10T22:17:34.388+06:30  INFO 43822 --- [identity-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2025-12-10T22:17:35.598+06:30  INFO 43822 --- [identity-service] [main] o.s.b.j.s.JettyServletWebServerFactory   : Server initialized with port: 8080
+2025-12-10T22:17:35.607+06:30  INFO 43822 --- [identity-service] [main] org.eclipse.jetty.server.Server          : jetty-12.1.4; built: 2025-11-10T17:42:37.481Z; git: 4137e00793d583cfc4ce76bf607e482178a85597; jvm 21.0.9+10
+2025-12-10T22:17:35.646+06:30  INFO 43822 --- [identity-service] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3052 ms
+2025-12-10T22:17:35.895+06:30  INFO 43822 --- [identity-service] [main] o.e.j.session.DefaultSessionIdManager    : Session workerName=node0
+2025-12-10T22:17:35.909+06:30  INFO 43822 --- [identity-service] [main] o.e.jetty.server.handler.ContextHandler  : Started osbjs.JettyEmbeddedWebAppContext@5a583720{application,/,b=file:/tmp/jetty-docbase.8080.14162369480742553443/,a=AVAILABLE,h=oeje11s.SessionHandler@4ed19b69{STARTED}}
+2025-12-10T22:17:35.910+06:30  INFO 43822 --- [identity-service] [main] o.e.j.e.servlet.ServletContextHandler    : Started osbjs.JettyEmbeddedWebAppContext@5a583720{application,/,b=file:/tmp/jetty-docbase.8080.14162369480742553443/,a=AVAILABLE,h=oeje11s.SessionHandler@4ed19b69{STARTED}}
+2025-12-10T22:17:35.912+06:30  INFO 43822 --- [identity-service] [main] org.eclipse.jetty.server.Server          : Started oejs.Server@6f65aa58{STARTING}[12.1.4,sto=0] @306ms
+2025-12-10T22:17:36.123+06:30  INFO 43822 --- [identity-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-10T22:17:36.221+06:30  INFO 43822 --- [identity-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-10T22:17:36.882+06:30  INFO 43822 --- [identity-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-10T22:17:36.922+06:30  INFO 43822 --- [identity-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-10T22:17:37.131+06:30  INFO 43822 --- [identity-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3bac86a3
+2025-12-10T22:17:37.136+06:30  INFO 43822 --- [identity-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-10T22:17:37.185+06:30  WARN 43822 --- [identity-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-10T22:17:37.209+06:30  INFO 43822 --- [identity-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/pos_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.11
+	Default catalog/schema: pos_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-10T22:17:38.292+06:30  INFO 43822 --- [identity-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-10T22:17:38.358+06:30  INFO 43822 --- [identity-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-10T22:17:38.762+06:30  INFO 43822 --- [identity-service] [main] n.d.b.g.c.a.GrpcClientAutoConfiguration  : Detected grpc-netty-shaded: Creating ShadedNettyChannelFactory + InProcessChannelFactory
+2025-12-10T22:17:39.017+06:30  INFO 43822 --- [identity-service] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-10T22:17:39.298+06:30  WARN 43822 --- [identity-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-10T22:17:39.401+06:30  WARN 43822 --- [identity-service] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0f4828f4-12cc-4ce5-b417-97176a27a1df
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-10T22:17:39.409+06:30  INFO 43822 --- [identity-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-10T22:17:40.290+06:30  INFO 43822 --- [identity-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-10T22:17:40.372+06:30  INFO 43822 --- [identity-service] [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-10T22:17:40.372+06:30  INFO 43822 --- [identity-service] [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-10T22:17:40.375+06:30  INFO 43822 --- [identity-service] [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-10T22:17:40.382+06:30  INFO 43822 --- [identity-service] [main] o.e.jetty.server.AbstractConnector       : Started oejs.ServerConnector@302e3484{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8080}
+2025-12-10T22:17:40.385+06:30  INFO 43822 --- [identity-service] [main] o.s.boot.jetty.JettyWebServer            : Jetty started on port 8080 (http/1.1, h2c) with context path '/'
+2025-12-10T22:17:40.399+06:30  INFO 43822 --- [identity-service] [main] c.o.i.IdentityServiceApplication         : Started IdentityServiceApplication in 8.484 seconds (process running for 9.011)
+2025-12-10T22:18:18.800+06:30  INFO 43822 --- [identity-service] [qtp981865495-50] c.o.i.f.a.service.impl.OtpServiceImpl    : incoming request for otp generation - nnmm5122004@gmail.com
+2025-12-10T22:18:18.801+06:30  INFO 43822 --- [identity-service] [qtp981865495-50] c.o.i.f.a.service.impl.OtpServiceImpl    : generate otp for email : nnmm5122004@gmail.com
+2025-12-10T22:18:19.310+06:30  INFO 43822 --- [identity-service] [qtp981865495-50] c.o.i.f.a.service.impl.OtpServiceImpl    : sending otp mail to mail service
+2025-12-10T22:18:29.455+06:30  WARN 43822 --- [identity-service] [qtp981865495-50] o.e.jetty.ee11.servlet.ServletChannel    : /identity-service/api/v1/auth/verify-email
+
+jakarta.servlet.ServletException: Request processing failed: io.grpc.StatusRuntimeException: UNKNOWN: Application error processing RPC
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:653) ~[jakarta.servlet-api-6.1.0.jar:6.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723) ~[jakarta.servlet-api-6.1.0.jar:6.1.0]
+	at org.eclipse.jetty.ee11.servlet.ServletHolder.handle(ServletHolder.java:750) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1668) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:199) ~[jetty-ee11-websocket-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$MappedServlet.handle(ServletHandler.java:1602) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.dispatch(ServletChannel.java:871) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.handle(ServletChannel.java:451) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.ServletHandler.handle(ServletHandler.java:470) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:546) ~[jetty-security-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.ee11.servlet.SessionHandler.handle(SessionHandler.java:763) ~[jetty-ee11-servlet-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1224) ~[jetty-server-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.server.Handler$Wrapper.handle(Handler.java:794) ~[jetty-server-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.server.handler.EventsHandler.handle(EventsHandler.java:81) ~[jetty-server-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.server.Server.handle(Server.java:197) ~[jetty-server-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:720) ~[jetty-server-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:412) ~[jetty-server-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1810) ~[jetty-server-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54) ~[jetty-io-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009) ~[jetty-util-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1239) ~[jetty-util-12.1.4.jar:12.1.4]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194) ~[jetty-util-12.1.4.jar:12.1.4]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.grpc.StatusRuntimeException: UNKNOWN: Application error processing RPC
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:368) ~[grpc-stub-1.77.0.jar:1.77.0]
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:349) ~[grpc-stub-1.77.0.jar:1.77.0]
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:174) ~[grpc-stub-1.77.0.jar:1.77.0]
+	at orion.grpc.mail.EmailServiceGrpc$EmailServiceBlockingStub.sendEmail(EmailServiceGrpc.java:196) ~[main/:na]
+	at com.oroin.identity_service.features.auth.grpc.GrpcMailClient.sendOtpMailRequestToMailService(GrpcMailClient.java:26) ~[main/:na]
+	at com.oroin.identity_service.features.auth.service.impl.OtpServiceImpl.generateOtp(OtpServiceImpl.java:62) ~[main/:na]
+	at com.oroin.identity_service.features.auth.controller.AuthController.verifyEmail(AuthController.java:28) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	... 114 common frames omitted
+
+2025-12-10T22:29:31.553+06:30  INFO 43822 --- [identity-service] [qtp981865495-34] c.o.i.f.a.service.impl.OtpServiceImpl    : incoming request for otp generation - nnmm5122004@gmail.com
+2025-12-10T22:29:31.553+06:30  INFO 43822 --- [identity-service] [qtp981865495-34] c.o.i.f.a.service.impl.OtpServiceImpl    : generate otp for email : nnmm5122004@gmail.com
+2025-12-10T22:29:31.555+06:30  INFO 43822 --- [identity-service] [qtp981865495-34] c.o.i.f.a.service.impl.OtpServiceImpl    : sending otp mail to mail service
+2025-12-10T22:29:39.123+06:30  INFO 43822 --- [identity-service] [qtp981865495-34] c.o.i.f.a.service.impl.OtpServiceImpl    : sent otp mail successfully 

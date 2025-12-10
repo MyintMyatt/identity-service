@@ -5,6 +5,8 @@ import com.oroin.identity_service.configuration.OtpConfig;
 import com.oroin.identity_service.features.auth.grpc.GrpcMailClient;
 import com.oroin.identity_service.features.auth.service.OtpService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import orion.grpc.mail.EmailResponse;
@@ -20,6 +22,8 @@ import java.util.Random;
 @RequiredArgsConstructor
 public class OtpServiceImpl implements OtpService {
 
+    private final Logger logger = LoggerFactory.getLogger(OtpServiceImpl.class);
+
     private final OtpConfig otpConfig;
     private final StringRedisTemplate redis;
     private final GrpcMailClient mailClient;
@@ -32,6 +36,9 @@ public class OtpServiceImpl implements OtpService {
 
     @Override
     public ApiResponse generateOtp(String email, String ipAddr) {
+
+        logger.info("incoming request for otp generation - " + email );
+        logger.info("generate otp for email : " + email );
 
         /*
          * @ validation
@@ -49,6 +56,8 @@ public class OtpServiceImpl implements OtpService {
         /*
          * @ send otp mail
          * */
+        logger.info("sending otp mail to mail service");
+
         String emailBodyHtml = "<span>" + otp + "</span>";
         EmailResponse response = mailClient.sendOtpMailRequestToMailService(
                 "Welcome! Please Verify Your Email",
@@ -66,6 +75,7 @@ public class OtpServiceImpl implements OtpService {
             redis.opsForValue().set(OTP_RATE_PREFIX + email, "1", otpConfig.getRateLimitTtl());
             redis.opsForValue().set(OTP_IP_PREFIX + ipAddr, "1", otpConfig.getIpRateLimitTtl());
 
+            logger.info("sent otp mail successfully ", LocalDateTime.now());
             return ApiResponse.builder()
                     .code(200)
                     .success(1)
@@ -74,6 +84,9 @@ public class OtpServiceImpl implements OtpService {
                     .metadata(Map.of("timestamp", System.currentTimeMillis()))
                     .build();
         }
+
+        logger.info("sending otp mail failed : " + response.getMessage());
+
         return ApiResponse.builder()
                 .code(500)
                 .success(0)

@@ -10,14 +10,14 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(Exception.class)
-    public ApiResponse handleGlobalException(Exception e) {
-        return ApiResponse.builder()
-                .code(500)
-                .success(0)
-                .message(e.getMessage())
-                .data(null)
-                .metadata(Map.of("timestamp", LocalDateTime.now()))
-                .build();
-    }
+//    @ExceptionHandler(Exception.class)
+//    public ApiResponse handleGlobalException(Exception e) {
+//        return ApiResponse.builder()
+//                .code(500)
+//                .success(0)
+//                .message(e.getMessage())
+//                .data(null)
+//                .metadata(Map.of("timestamp", LocalDateTime.now()))
+//                .build();
+//    }
 }
