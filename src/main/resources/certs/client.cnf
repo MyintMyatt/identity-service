@@ -1,0 +1,10 @@
+[req]
+default_bits = 4096
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+CN = grpc-client
+
+openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out client.crt -days 3650 -sha256

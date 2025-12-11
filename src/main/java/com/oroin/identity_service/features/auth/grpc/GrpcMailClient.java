@@ -1,5 +1,6 @@
 package com.oroin.identity_service.features.auth.grpc;
 
+
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Component;
 import orion.grpc.mail.EmailRequest;

@@ -1,8 +1,8 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '4.0.0'
-	id 'io.spring.dependency-management' version '1.1.7'
-	id 'com.google.protobuf' version '0.9.5'
+    id 'java'
+    id 'org.springframework.boot' version '4.0.0'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id 'com.google.protobuf' version '0.9.5'
 }
 
 group = 'com.oroin'
@@ -10,15 +10,15 @@ version = '0.0.1-SNAPSHOT'
 description = 'User Management, Authentication and Authorization'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
-	}
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 ext {
@@ -28,33 +28,35 @@ ext {
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 ext {
-	set('springGrpcVersion', "1.0.0")
+    set('springGrpcVersion', "1.0.0")
 }
 
 dependencies {
-	implementation ( 'org.springframework.boot:spring-boot-starter-webmvc' ){
+    implementation('org.springframework.boot:spring-boot-starter-webmvc') {
         exclude(group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat')
     }
     /*jetty*/
     implementation 'org.springframework.boot:spring-boot-starter-jetty:4.0.0'
     implementation 'org.eclipse.jetty.http2:jetty-http2-server:12.1.4'
 
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	implementation 'org.springframework.boot:spring-boot-starter-kafka'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-kafka'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 
     /*grpc server*/
-	implementation 'io.grpc:grpc-services'
-	implementation 'org.springframework.grpc:spring-grpc-server-web-spring-boot-starter'
+//	implementation 'io.grpc:grpc-services'
+    implementation 'io.grpc:grpc-netty-shaded:1.76.0'
 
     /*grpc client*/
-    implementation 'net.devh:grpc-client-spring-boot-starter:3.1.0.RELEASE'
+//    implementation 'net.devh:grpc-client-spring-boot-starter:2.15.0.RELEASE'
+    implementation 'net.devh:grpc-client-spring-boot-starter:3.1.0.RELEASE' exclude group: 'io.grpc', module: 'grpc-netty-shaded'
+    // For the client (only)
 
     /*google oauth*/
     implementation('com.google.api-client:google-api-client:2.8.1')
@@ -73,48 +75,48 @@ dependencies {
     implementation 'org.mapstruct:mapstruct:1.6.3'
     implementation 'org.mapstruct:mapstruct-processor:1.6.3'
 
-	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
-	runtimeOnly 'org.postgresql:postgresql'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+    runtimeOnly 'org.postgresql:postgresql'
 
     /*annotation processor*/
-	annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-actuator-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-jdbc-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-kafka-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
-	testImplementation 'org.springframework.grpc:spring-grpc-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.springframework.boot:spring-boot-starter-actuator-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-jdbc-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-kafka-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    testImplementation 'org.springframework.grpc:spring-grpc-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 dependencyManagement {
-	imports {
-		mavenBom "org.springframework.grpc:spring-grpc-dependencies:${springGrpcVersion}"
-	}
+    imports {
+        mavenBom "org.springframework.grpc:spring-grpc-dependencies:${springGrpcVersion}"
+    }
 }
 
 protobuf {
-	protoc {
-		artifact = 'com.google.protobuf:protoc'
-	}
-	plugins {
-		grpc {
-			artifact = 'io.grpc:protoc-gen-grpc-java'
-		}
-	}
-	generateProtoTasks {
-		all()*.plugins {
-			grpc {
-				option '@generated=omit'
-			}
-		}
-	}
+    protoc {
+        artifact = 'com.google.protobuf:protoc'
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {
+                option '@generated=omit'
+            }
+        }
+    }
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }

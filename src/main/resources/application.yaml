@@ -6,8 +6,14 @@ server:
 grpc:
   client:
     mailServer:
-      address: "static://localhost:9090"#"static://localhost:9090"
-      negotiation-type: plaintext
+      address: "static://localhost:9090"
+      negotiationType: TLS
+      security:
+        clientAuthEnabled: true
+        trustCertCollection: classpath:certs/ca.crt
+        certificateChain: classpath:certs/client.crt
+        privateKey: classpath:certs/client.key
+#        authorityOverride: localhost
 spring:
   application:
     name: identity-service
@@ -51,9 +57,8 @@ otp:
 logging:
   level:
     root: INFO
-  structured:
-    format:
-      console: ecs
+  #  structured:
+  #    format:
+  #      console: ecs
   file:
     name: identity-service-log.json
-
