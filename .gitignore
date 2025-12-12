@@ -39,3 +39,4 @@ out/
 
 src/main/resources/application-prod.yaml
 .env
+identity-service-log.json
