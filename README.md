@@ -36,3 +36,5 @@
     &prompt=consent
 ```
 
+
+docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoiMWU1ZTYxN2JlY2E4NGJmZmQ2NjYzNGMwODgzMDQxMmIiLCJ0IjoiOWUwYmRkZjMtMzEwYi00ZmMxLThlMjUtNGEzNmIyMjE2MzU1IiwicyI6IllUWTFOakkwTWpFdE1tVmtNeTAwT0dZMkxUbGlPRFl0TmpFMk0ySXlPRGN5T0RRMyJ9
