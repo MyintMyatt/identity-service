@@ -6,13 +6,17 @@ import com.oroin.identity_service.common.utils.ResponseUtils;
 
 import com.oroin.identity_service.features.user.dto.reqesut.GoogleCodeRequest;
 import com.oroin.identity_service.features.user.dto.reqesut.UserRequest;
+import com.oroin.identity_service.features.user.grpc.FileServiceGrpcClient;
 import com.oroin.identity_service.features.user.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.Map;
 import java.util.Optional;
 
@@ -22,6 +26,7 @@ import java.util.Optional;
 public class UserController {
 
     private final UserService userService;
+    private final FileServiceGrpcClient fileServiceGrpcClient;
 
     @PostMapping
     public ApiResponse registerUser(@Validated(Create.class) UserRequest request) {
@@ -35,9 +40,21 @@ public class UserController {
     }
 
     @GetMapping("/hello")
-    public ResponseEntity<?> hello(){
+    public ResponseEntity<?> hello() {
         return ResponseEntity.of(Optional.of(Map.of("msg", "helo"))
         );
+    }
+
+    @PostMapping(value = "/upload-profile-photo",  consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<?> uploadPhoto(
+            @RequestParam("file") MultipartFile file
+    ) throws IOException {
+        String fileId = fileServiceGrpcClient.uploadFile(file);
+        return ResponseEntity.ok(Map.of(
+                "fileId", fileId,
+                "message", "Upload successful"
+        ));
+
     }
 
 

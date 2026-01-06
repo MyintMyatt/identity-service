@@ -13,6 +13,10 @@ grpc:
         trustCertCollection: classpath:certs/ca.crt
         certificateChain: classpath:certs/client.crt
         privateKey: classpath:certs/client.key
+
+    fileServer:
+      address: "static://localhost:9091"
+      negotiationType: PLAINTEXT
 #        authorityOverride: localhost
 spring:
   application:
@@ -54,11 +58,11 @@ otp:
   ip-rate-limit-ttl: 10s
 
 # logging
-logging:
-  level:
-    root: INFO
-  #  structured:
-  #    format:
-  #      console: ecs
-  file:
-    name: identity-service-log.json
+#logging:
+#  level:
+#    root: INFO
+#  #  structured:
+#  #    format:
+#  #      console: ecs
+#  file:
+#    name: identity-service-log.json
